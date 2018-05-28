@@ -14,7 +14,21 @@
             Resultat
         </p>
         <section class="resultat">
+            <p id="result1"></p>
 
         </section>
+        <script type="text/javascript">
+        var result = document.getElementById("result1");
+        var myBtn = document.getElementsByTagName("input")[0];
+        myBtn.addEventListener("click", moderation);
+
+
+
+        function moderation(){
+            var text = document.getElementsByTagName("textarea")[0].value;
+            if (text == ":)" ){text.chn.replace(":)", "--")}
+            result.innerText = text;
+        }
+        </script>
     </body>
 </html>
