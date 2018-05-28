@@ -18,6 +18,7 @@
 
         </section>
         <script type="text/javascript">
+        var text = document.getElementsByTagName("textarea")[0];
         var result = document.getElementById("result1");
         var myBtn = document.getElementsByTagName("input")[0];
         myBtn.addEventListener("click", moderation);
@@ -25,9 +26,8 @@
 
 
         function moderation(){
-            var text = document.getElementsByTagName("textarea")[0].value;
-            if (text == ":)" ){text.chn.replace(":)", "--")}
-            result.innerText = text;
+            text.value = text.value.replace(/:\)/g, "--");
+            result.innerText = text.value;
         }
         </script>
     </body>
