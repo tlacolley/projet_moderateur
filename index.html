@@ -23,11 +23,8 @@
         var myBtn = document.getElementsByTagName("input")[0];
         myBtn.addEventListener("click", moderation);
 
-
-
         function moderation(){
-            text.value = text.value.replace(/:\)/g, "--");
-            result.innerText = text.value;
+            result.innerText = text.value.replace(/:\)/g, "--");
         }
         </script>
     </body>
